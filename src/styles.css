@@ -5,6 +5,12 @@
   font-size: 13px;
 }
 
+.spinner {
+  display: block;
+  margin: 40px auto 0px auto;
+  width: 10%;
+}
+
 .positive {
   color: green;
   font-weight: bolder;

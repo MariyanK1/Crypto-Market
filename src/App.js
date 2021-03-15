@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./styles.css";
+
 import Place from "../src/components/CoinPlace";
 import Th from "../src/components/TableHead";
 import CoinName from "../src/components/CoinName";
@@ -11,9 +11,13 @@ import MarketCap from "../src/components/MarketCap";
 import SparkLinez from "../src/components/SparkLinez";
 import TotalVolume from "../src/components/TotalVolume";
 import CirculatingSupply from "../src/components/CirculatingSupply";
+import Spinner from "./components/Spinner";
+
+import "./styles.css";
 
 const App = () => {
   const [coins, setCoins] = useState([]);
+  const [loading, setLoading] = useState(true);
   const url =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=7d";
 
@@ -22,11 +26,14 @@ const App = () => {
       .get(url)
       .then((res) => {
         setCoins(res.data);
+        setLoading(false);
       })
       .catch(console.error);
   }, []);
 
-  return (
+  return loading ? (
+    <Spinner />
+  ) : (
     <table>
       <Th />
       <tbody>
