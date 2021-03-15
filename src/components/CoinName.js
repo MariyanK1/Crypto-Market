@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "./CoinImage";
 
-function Name(props) {
+function Name({ image, name, symbol }) {
   return (
     <td>
-      <Image image={props.image} /> <strong>{props.name}</strong>(
-      {props.symbol.toUpperCase()})
+      <Image image={image} /> <strong>{name}</strong>({symbol.toUpperCase()})
     </td>
   );
 }

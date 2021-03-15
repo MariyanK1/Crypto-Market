@@ -1,10 +1,10 @@
 import React from "react";
 
-function CurrentPrice(props) {
+function CurrentPrice({ price }) {
   return (
-      <td>
-        <strong>${props.price.toLocaleString()}</strong>
-      </td>
+    <td>
+      <strong>${price.toLocaleString()}</strong>
+    </td>
   );
 }
 

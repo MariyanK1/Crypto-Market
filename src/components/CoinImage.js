@@ -1,7 +1,7 @@
 import React from "react";
 
-function Image(props) {
-  return <img src={props.image} alt="image" height="23" width="23" />;
+function Image({ image }) {
+  return <img src={image} height="23" width="23" alt="coin-img" />;
 }
 
 export default Image;

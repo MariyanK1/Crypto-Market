@@ -1,9 +1,7 @@
 import React from "react";
 
-function Place(props) {
-  return (
-      <td>{props.place + 1}</td>
-  );
+function Place({ place }) {
+  return <td>{place + 1}</td>;
 }
 
 export default Place;

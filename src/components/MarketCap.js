@@ -1,10 +1,10 @@
 import React from "react";
 
-function MarketCap(props) {
+function MarketCap({ value }) {
   return (
-      <td>
-        <strong>${props.value.toLocaleString()}</strong>
-      </td>
+    <td>
+      <strong>${value.toLocaleString()}</strong>
+    </td>
   );
 }
 

@@ -1,14 +1,13 @@
 import React from "react";
 
-function CirculatingSupply(props) {
+function CirculatingSupply({ value, symbol }) {
   return (
-      <td>
-        <strong>
-          {props.value.toLocaleString()}
-          {"  "}
-          <small>{props.symbol.toUpperCase()}</small>
-        </strong>
-      </td>
+    <td>
+      <strong>
+        {value.toLocaleString()}
+        <small>{symbol.toUpperCase()}</small>
+      </strong>
+    </td>
   );
 }
 
